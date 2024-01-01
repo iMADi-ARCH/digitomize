@@ -1,5 +1,4 @@
 import React, { useRef, useState } from "react";
-import "/src/components/css/Card.css";
 import Marquee from "react-fast-marquee";
 
 import {

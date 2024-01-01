@@ -21,7 +21,9 @@ function ContestCard({ item }) {
       </div>
       <div className="justify-center hidden w-full md:flex">
         <Link to="/contests">
-          <button className="contestbtn px-4 py-2">check out</button>
+          <button className="rounded-xl border-xl px-4 py-2 bg-[#3c3b86] transition-colors hover:bg-[#313073]">
+            check out
+          </button>
         </Link>
       </div>
     </div>
