@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import ContestCards from "../ContestCards";
+import { ContestCards } from "../ContestCards";
 
 export default function SectionThree() {
   return (
@@ -9,8 +9,10 @@ export default function SectionThree() {
           <div className="md:my-24 mx-auto w-4/5">
             <h1 className="text-white max-md:text-4xl md:text-7xl text-center">
               <span className="block mt-1 md:mt-6">
-                <span className="bg-digitomize-bg px-2 rounded-md">Discover</span> the
-                perfect coding competition for you
+                <span className="bg-digitomize-bg px-2 rounded-md">
+                  Discover
+                </span>{" "}
+                the perfect coding competition for you
               </span>{" "}
             </h1>
             <p className="max-md:text-sm text-center mt-8 text-description max-w-2xl mx-auto">
@@ -18,7 +20,10 @@ export default function SectionThree() {
               such as remaining time, duration, and more.
             </p>
             <div className="flex justify-center m-8">
-              <Link to='/contests' className="btn px-5 py-2 bg-button-primary border-button-primary-helper hover:bg-button-primary-hover text-lg text-white font-medium duration-75 rounded-2xl border">
+              <Link
+                to="/contests"
+                className="btn px-5 py-2 bg-button-primary border-button-primary-helper hover:bg-button-primary-hover text-lg text-white font-medium duration-75 rounded-2xl border"
+              >
                 Explore Contests
               </Link>
             </div>

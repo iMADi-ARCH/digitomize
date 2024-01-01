@@ -1,6 +1,4 @@
 import React, { useRef, useState } from "react";
-import { Link } from "react-router-dom";
-import CardActions from "@mui/material/CardActions";
 import "/src/components/css/Card.css";
 import Marquee from "react-fast-marquee";
 
@@ -11,7 +9,7 @@ import {
   codechef,
   atcoder,
   codeforces,
-} from "./AllAssets";
+} from "../AllAssets";
 
 const platformsIcon = [
   leetcode,
@@ -23,6 +21,7 @@ const platformsIcon = [
 ];
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
+import ContestCard from "./ContestCard";
 const theme = createTheme({
   palette: {
     mode: "dark",
@@ -71,7 +70,7 @@ export default function ContestCards() {
 
   return (
     <ThemeProvider theme={theme}>
-      <div className="mt-12 md:hidden">
+      {/* <div className="mt-12 md:hidden">
         <Marquee speed={100}>
           {platforms.map((item) => (
             <div key={item.name} className="flex justify-center">
@@ -86,33 +85,11 @@ export default function ContestCards() {
             </div>
           ))}
         </Marquee>
-      </div>
-      <div className="w-screen max-md:hidden">
-        <Marquee speed={200} className="flex flex-row" pauseOnHover={true}>
+      </div> */}
+      <div className="w-full">
+        <Marquee speed={150} className="flex flex-row" pauseOnHover={true}>
           {platforms.map((item) => (
-            <div key={item.name} className="contestcard font-['Geist'] border border-contestborder py-10 px-4 w-4/5">
-              <div className="flex justify-center">
-                <span className="bg-contestlogo p-4 rounded-full">
-                  <img
-                    className="w-20 h-20"
-                    src={item.icon}
-                    draggable={false}
-                    alt="leetcode"
-                  />
-                </span>
-              </div>
-              <div className="text-center mt-4 mb-5">
-                <h1 className="text-xl text-[#ffffff] mb-2 mt-0">
-                  {item.name}
-                </h1>
-                <p className=" text-[#B7B6FF]">{item.description}</p>
-              </div>
-              <CardActions className="justify-center">
-                <Link to="/contests">
-                  <button className="contestbtn px-4 py-2">check out</button>
-                </Link>
-              </CardActions>
-            </div>
+            <ContestCard item={item} key={item.name} />
           ))}
         </Marquee>
       </div>
