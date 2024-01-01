@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ContestCards } from "../ContestCards";
+import { ContestCards } from "./ContestCards";
 
 export default function SectionThree() {
   return (

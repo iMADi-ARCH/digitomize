@@ -8,7 +8,7 @@ import {
   codechef,
   atcoder,
   codeforces,
-} from "../AllAssets";
+} from "../../AllAssets";
 
 const platformsIcon = [
   leetcode,

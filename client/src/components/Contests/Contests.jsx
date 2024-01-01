@@ -1,6 +1,5 @@
 import { useMemo } from "react";
-import Card from "./globals/Card";
-import "./css/Contests.css";
+import Card from "../globals/Card";
 
 function Contests({ contests, range }) {
   const contentDescription =
@@ -13,11 +12,8 @@ function Contests({ contests, range }) {
 
   return (
     <>
-      <div className="allContests scroll-smooth">
-        <div
-          className="allContests lg:justify-evenly md:justify-evenly sm:justify-center px-4"
-          style={{ display: "flex", flexWrap: "wrap" }}
-        >
+      <div className="mx-[2%] scroll-smooth">
+        <div className="flex flex-wrap lg:justify-evenly md:justify-evenly sm:justify-center px-4">
           {queryData.map((contest) => (
             <Card key={contest.vanity} contest={contest} />
           ))}

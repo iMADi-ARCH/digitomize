@@ -29,6 +29,7 @@ import {
   Footer,
   MetaData,
 } from "./components/CustomComponents";
+import { Contests } from "./components/Contests";
 import UserDashboard from "./user/dashboard/UserDashboard";
 import UserDashPersonal, {
   loader as userDashPersonalLoader,
@@ -53,7 +54,6 @@ import Leaderboard from "./user/leaderboard/Leaderboard";
 
 /*------------ DSA Sheets Import ------------ */
 import SheetLayout from "./dsaSheets/layout/SheetLayout";
-
 
 import formbricks from "@formbricks/js";
 
@@ -90,7 +90,7 @@ import ContestListPage from "./pages/admin/ContestListPage";
 import CommunityListPage from "./pages/admin/CommunityListPage";
 import ContestPageLayout from "./components/Contests/ContestPageLayout";
 import Filter from "./components/Contests/Filter";
-import Challenges from "./components/Contests/Challenges/Challenges";
+import Challenges from "./components/Challenges/Challenges";
 import ComingSoonLoader from "./components/Contests/ComingSoonLoader";
 
 function Logout() {
@@ -152,11 +152,17 @@ const router = createBrowserRouter(
         <Route path="logout" element={<Logout />} />;
         <Route path="signup" element={<Signup />} loader={signupLoader} />
         <Route element={<ContestPageLayout />}>
-          <Route path="contests" element={<Filter />} />
+          <Route path="contests" element={<Contests />} />
           <Route path="challenges" element={<Challenges />} />
-          <Route path="hackathons" element={<ComingSoonLoader value='Hackathons' />} />
-          <Route path="internships" element={<ComingSoonLoader value='Internships' />} />
-          <Route path="jobs" element={<ComingSoonLoader value='Jobs' />} />
+          <Route
+            path="hackathons"
+            element={<ComingSoonLoader value="Hackathons" />}
+          />
+          <Route
+            path="internships"
+            element={<ComingSoonLoader value="Internships" />}
+          />
+          <Route path="jobs" element={<ComingSoonLoader value="Jobs" />} />
         </Route>
         {/* <Route path="updates" element={<Updates />} /> */}
         <Route path="home" element={<Homepage />} />
@@ -178,8 +184,8 @@ const router = createBrowserRouter(
           <Route
             index
             element={<UserDashboard />}
-          // loader={userDashPersonalLoader}
-          // loader={userDashPersonalLoader}
+            // loader={userDashPersonalLoader}
+            // loader={userDashPersonalLoader}
           />
           <Route
             path="account"
@@ -220,7 +226,12 @@ function App() {
         <UserContextProvider>
           <ToastContainer />
           <div>
-          <Snowfall snowflakeCount={100} speed={[0.2, 1]} wind={[0, 1]} style={{position:"fixed"}}/>
+            <Snowfall
+              snowflakeCount={100}
+              speed={[0.2, 1]}
+              wind={[0, 1]}
+              style={{ position: "fixed" }}
+            />
             <RouterProvider router={router} />
           </div>
         </UserContextProvider>

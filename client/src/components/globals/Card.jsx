@@ -72,7 +72,7 @@ function Card({ contest }) {
         <img src={hostToSVGMap[host]} alt={host} width="13%" />
       </div>
       <Link to={`/contests/${vanity}`} className="my-auto">
-        <h2 className="text-3xl pb-8">{name}</h2>
+        <h2 className="text-3xl pb-8 text-center lg:text-left">{name}</h2>
       </Link>
       <div className="flex justify-between items-end">
         <div>

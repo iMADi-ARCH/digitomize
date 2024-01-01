@@ -25,7 +25,7 @@ import {
   atcoder,
   codeforces,
 } from "../AllAssets";
-import Contests from "../Contests";
+import Contests from "./Contests";
 import { Element } from "react-scroll";
 import CustomSlider from "../CustomSlider";
 const backendUrl = import.meta.env.VITE_REACT_APP_BACKEND_URL;
